@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double price = 0;
+    int quantity = 0;
+    double taxRate = 0.05;
+    double total = 0;
+
+    cout << "Enter price per item: ";
+    cin >> price;
+    cout << "Enter quantity: ";
+    cin >> quantity;
+
+    total = price * quantity;
+    total = total + total * taxRate;
+
+    cout << "Total with tax: " << total << endl;
+
+    if (price < 0 || quantity < 0) {
+        cout << "Warning: Negative values entered!" << endl;
+    }
+
+return0;
+}

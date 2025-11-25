@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    int evenCount = 0;
+    int oddCount = 0;
+
+    cout << "Even and Odd Number Counter" << endl;
+    cout <<".     " << endl;
+    cout << "Enter numbers (enter 0 to stop):" << endl;
+    while (true) {
+        cout << "Enter a number: ";
+        cin >> number;
+        if (number == 0) {
+            break;
+        }
+
+        if (number % 2 == 0) {
+            evenCount++;
+            cout << number << " is EVEN" << endl;
+        } else {
+            oddCount++;
+            cout << number << " is ODD" << endl;
+        }
+    }
+
+    cout << "\n.   FINAL RESULTS     " << endl;
+    cout << "Total even numbers: " << evenCount << endl;
+    cout << "Total odd numbers: " << oddCount << endl;
+    cout << "Total numbers entered: " << (evenCount + oddCount) << endl;
+    return0;
+}
